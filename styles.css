@@ -1,0 +1,63 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background: #cd65d1;
+}
+
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  width: 400px; /* puedes ajustar */
+  margin-bottom: 50px;
+}
+
+.slogan {
+  font-style: italic;
+  color: #555;
+}
+
+.section {
+  padding: 5rem 1rem;
+}
+
+.card-custom {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.dark {
+  background: #111;
+  color: white;
+}
+
+.footer {
+  padding: 3rem;
+  background: #95C121;
+  color: white;
+}
+
+.qr {
+  margin: 1rem auto;
+  width: 90px;
+  height: 90px;
+  border: 2px dashed white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
