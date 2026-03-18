@@ -1,99 +1,660 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css">
+
+<title>cit upsss</title>
+
 </head>
+
 
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">cit upsss</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto align-items-center">
+
+<li class="nav-item">
+<a class="nav-link" onclick="scrollToSection('about')" style="cursor:pointer">
+Sobre el proyecto
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#">
+Comisiones
+</a>
+</li>
+
+<li class="nav-item ms-3">
+
+<span id="userEmail" class="me-3"></span>
+
+<button id="loginBtn" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#loginModal">
+Iniciar sesión
+</button>
+
+<button id="logoutBtn" class="btn btn-outline-dark" onclick="logout()" style="display:none;">
+Cerrar sesión
+</button>
+
+</li>
+
+</ul>
+
+</div>
+</div>
+</nav>
+
+
+
 <!-- HERO -->
 <section class="hero d-flex align-items-center justify-content-center text-center">
-  <div>
-     <div class="logo-container">
-  <img src="images/logo-cit-upsss.svg" alt="Logo Cit Upsss" class="logo">
-  <p class="slogan">Ups, pensé demasiado.</p>
+
+<div>
+
+<div class="logo-container">
+<img src="images/logo-cit-upsss.svg" alt="Logo Cit Upsss" class="logo">
+<p class="slogan">Ups, pensé demasiado.</p>
 </div>
-    <button class="btn btn-outline-dark mt-4" onclick="scrollToSection('about')">
-      ver más
-    </button>
-  </div>
+
+<button class="btn btn-outline-dark mt-4" onclick="scrollToSection('about')">
+ver más
+</button>
+
+</div>
+
 </section>
+
+
 
 <!-- ABOUT -->
 <section id="about" class="container section">
-  <div class="row">
-    <div class="col-md-8">
-      <h2>¿Qué es cit upsss?</h2>
-      <p>
-        cit upsss! es un proyecto creativo donde se comparten procesos y resultados
-        de dibujo, acompañados —a veces— por reflexiones sobre política, arte y música.
-      </p>
-      <p>
-        No siempre se habla. No siempre se explica. El punto es crear.
-      </p>
-    </div>
-  </div>
+
+<div class="row">
+
+<div class="col-md-8">
+
+<h2>¿Qué es cit upsss?</h2>
+
+<p>
+cit upsss! es un proyecto creativo donde se comparten procesos y resultados
+de dibujo, acompañados —a veces— por reflexiones sobre política, arte y música.
+</p>
+
+<p>
+No siempre se habla. No siempre se explica. El punto es crear.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <!-- OFERTA -->
 <section class="section bg-light">
-  <div class="container">
-    <h2>¿Qué ofrezco?</h2>
-    <div class="row mt-4">
-      <div class="col-md-4 card-custom">Procesos de dibujo</div>
-      <div class="col-md-4 card-custom">Reflexion creativa</div>
-      <div class="col-md-4 card-custom">Comisiones</div>
-    </div>
-  </div>
+
+<div class="container">
+
+<h2>¿Qué ofrezco?</h2>
+
+<div class="row mt-4">
+
+<div class="col-md-4 card-custom">
+Procesos de dibujo
+</div>
+
+<div class="col-md-4 card-custom">
+Reflexion creativa
+</div>
+
+<div class="col-md-4 card-custom">
+Comisiones
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
 
 <!-- DIFERENCIADOR -->
 <section class="section dark">
-  <div class="container">
-    <h2>Diferenciador</h2>
-    <p>
-      cit upsss! no busca perfección ni viralidad.
-      Aquí el error, el silencio y pensar demasiado también son parte del arte.
-    </p>
-  </div>
+
+<div class="container">
+
+<h2>Diferenciador</h2>
+
+<p>
+cit upsss! no busca perfección ni viralidad.
+Aquí el error, el silencio y pensar demasiado también son parte del arte.
+</p>
+
+</div>
+
 </section>
+
+
 
 <!-- COLABORACIONES -->
 <section class="section">
-  <div class="container">
-    <h2>Colaboraciones</h2>
-    <p>
-      A futuro, este espacio se abre para colaborar con otros artistas y creativos,
-      compartiendo distintos procesos y miradas.
-    </p>
-    <button class="btn btn-dark mt-3" onclick="alert('Espacio abierto a colaborar ✨')">
-      quiero colaborar
-    </button>
-  </div>
+
+<div class="container">
+
+<h2>Colaboraciones</h2>
+
+<p>
+A futuro, este espacio se abre para colaborar con otros artistas y creativos,
+compartiendo distintos procesos y miradas.
+</p>
+
+<button class="btn btn-dark mt-3"
+onclick="alert('Espacio abierto a colaborar ✨')">
+
+quiero colaborar
+
+</button>
+
+</div>
+
 </section>
+
+<!-- CONTACTO -->
+<section class="section bg-light">
+
+<div class="container">
+
+<h2>Contacto</h2>
+
+<p>
+Si quieres contactarme para colaboraciones o comisiones,
+puedes enviarme un mensaje aquí.
+</p>
+
+<div class="row mt-4">
+
+<div class="col-md-6">
+
+<div class="mb-3">
+<label class="form-label">Nombre</label>
+<input type="text" class="form-control" id="contactName">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Correo</label>
+<input type="email" class="form-control" id="contactEmail">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Mensaje</label>
+<textarea class="form-control" id="contactMessage" rows="4"></textarea>
+</div>
+
+<button class="btn btn-dark" onclick="sendMessage()">
+Enviar mensaje
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PANEL ADMIN -->
+<section id="adminPanel" class="section bg-light" style="display:none;">
+
+<div class="container">
+
+<h2>Panel de administrador</h2>
+
+<br>
+
+<div class="d-flex flex-wrap gap-2 mb-3">
+    <select id="filterOrder" class="form-select w-auto" onchange="loadMessages()">
+        <option value="desc">Más recientes primero</option>
+        <option value="asc">Más antiguos primero</option>
+    </select>
+
+    <select id="filterStatus" class="form-select w-auto" onchange="loadMessages()">
+        <option value="all">Todos los mensajes</option>
+        <option value="unread">No leídos</option>
+        <option value="fav">Solo destacados ⭐</option>
+    </select>
+</div>
+
+<button class="btn btn-dark mb-3" onclick="loadMessages()">
+Actualizar mensajes
+</button>
+
+<div id="messagesList"></div>
+
+</div>
+
+</section>
+
+
 
 <!-- FOOTER -->
 <footer class="footer text-center">
-  <p>@cit.artoops</p>
-  <div class="qr">QR</div>
+
+<p>@cit.artoops</p>
+
+<div class="qr">
+QR
+</div>
+
 </footer>
+
+
+
+<!-- MODAL LOGIN -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 class="modal-title">
+Iniciar sesión
+</h5>
+
+<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+
+<div class="modal-body">
+
+<form>
+
+<p class="text-center">
+
+¿No tienes cuenta?
+
+<button type="button" class="btn btn-link" onclick="registerUser()">
+Registrarse
+</button>
+
+</p>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+Correo
+</label>
+
+<input type="email" class="form-control" id="loginEmail">
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+Contraseña
+</label>
+
+<input type="password" class="form-control" id="loginPassword">
+
+</div>
+
+
+<button type="button" class="btn btn-dark w-100" onclick="login()">
+Entrar
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+
 <!-- JS -->
 <script src="script.js"></script>
+
+
+
+<!-- FIREBASE -->
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+
+import {
+getAuth,
+signInWithEmailAndPassword,
+createUserWithEmailAndPassword,
+onAuthStateChanged,
+signOut
+}
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
+
+import {
+getFirestore,
+collection,
+addDoc,
+getDocs,
+deleteDoc,
+doc,
+query,
+orderBy,
+where
+}
+from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+
+import { updateDoc } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js"; 
+// Marcar como leído/no leído
+window.toggleLeido = async function(id, estadoActual) {
+    const docRef = doc(db, "mensajes", id);
+    await updateDoc(docRef, { leido: !estadoActual });
+    loadMessages();
+}
+
+// Marcar como favorito
+window.toggleFavorito = async function(id, estadoActual) {
+    const docRef = doc(db, "mensajes", id);
+    await updateDoc(docRef, { favorito: !estadoActual });
+    loadMessages();
+}
+
+// Responder (Abre el cliente de correo del admin)
+window.responderMensaje = function(email, nombre) {
+    const subject = encodeURIComponent("Respuesta de cit upsss!");
+    const body = encodeURIComponent(`Hola ${nombre},\n\n`);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+}
+
+
+const firebaseConfig = {
+apiKey: "AIzaSyALthGV3CGinMECGwGMOayyWY5YM1vWrmM",
+authDomain: "cit-art-oops.firebaseapp.com",
+projectId: "cit-art-oops",
+storageBucket: "cit-art-oops.firebasestorage.app",
+messagingSenderId: "807620211132",
+appId: "1:807620211132:web:e8c55add3ba5c00e9efbb9"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+
+
+/* LOGIN */
+
+window.login = function(){
+
+const email = document.getElementById("loginEmail").value;
+const password = document.getElementById("loginPassword").value;
+
+signInWithEmailAndPassword(auth,email,password)
+
+.then((userCredential)=>{
+
+const user = userCredential.user;
+
+alert("Sesión iniciada: " + user.email);
+
+})
+
+.catch((error)=>{
+
+alert(error.message);
+
+});
+
+}
+
+
+
+/* REGISTRO */
+
+window.registerUser = function(){
+
+const email = document.getElementById("loginEmail").value;
+const password = document.getElementById("loginPassword").value;
+
+createUserWithEmailAndPassword(auth,email,password)
+
+.then(async (userCredential)=>{
+
+const user = userCredential.user;
+
+alert("Usuario registrado: " + user.email);
+
+await addDoc(collection(db,"usuarios"),{
+email:user.email,
+uid:user.uid,
+fecha:new Date()
+});
+
+})
+
+.catch((error)=>{
+
+alert(error.message);
+
+});
+
+}
+
+
+
+/* DETECTAR SESION */
+
+onAuthStateChanged(auth,(user)=>{
+
+const emailDisplay = document.getElementById("userEmail");
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+const adminPanel = document.getElementById("adminPanel");
+
+if(user){
+
+emailDisplay.textContent = user.email;
+
+loginBtn.style.display = "none";
+logoutBtn.style.display = "inline-block";
+
+/* MOSTRAR PANEL SOLO AL ADMIN */
+
+if(user.email === "citlaligonzalezmora@hotmail.com"){
+
+adminPanel.style.display = "block";
+
+loadMessages();
+
+}
+
+}else{
+
+emailDisplay.textContent = "";
+
+loginBtn.style.display = "inline-block";
+logoutBtn.style.display = "none";
+
+adminPanel.style.display = "none";
+
+}
+
+});
+
+
+/* LOGOUT */
+
+window.logout = function(){
+
+signOut(auth)
+.then(()=>{
+
+alert("Sesión cerrada");
+
+})
+.catch((error)=>{
+
+alert(error.message);
+
+});
+
+}
+
+
+/* FORMULARIO CONTACTO */
+
+window.sendMessage = async function(){
+
+const name = document.getElementById("contactName").value;
+const email = document.getElementById("contactEmail").value;
+const message = document.getElementById("contactMessage").value;
+
+if(name === "" || email === "" || message === ""){
+alert("Completa todos los campos");
+return;
+}
+
+    try{
+        await addDoc(collection(db, "mensajes"), {
+        nombre: name,
+        email: email,
+        mensaje: message,
+        fecha: new Date(),
+        leido: false,      // <-- Nuevo: para saber si ya lo viste
+        favorito: false    // <-- Nuevo: para destacar colaboraciones importantes
+    });
+
+alert("Mensaje enviado");
+
+document.getElementById("contactName").value="";
+document.getElementById("contactEmail").value="";
+document.getElementById("contactMessage").value="";
+
+}catch(error){
+
+alert(error.message);
+
+}
+
+}
+
+window.loadMessages = async function() {
+    const container = document.getElementById("messagesList");
+    const order = document.getElementById("filterOrder").value;
+    const status = document.getElementById("filterStatus").value;
+
+    container.innerHTML = "<p class='text-muted'>Cargando mensajes...</p>";
+
+    try {
+        let mensajesRef = collection(db, "mensajes");
+        let q;
+
+        // Lógica de filtros
+        if (status === "unread") {
+            q = query(mensajesRef, where("leido", "==", false), orderBy("fecha", order));
+        } else if (status === "fav") {
+            q = query(mensajesRef, where("favorito", "==", true), orderBy("fecha", order));
+        } else {
+            q = query(mensajesRef, orderBy("fecha", order));
+        }
+
+        const querySnapshot = await getDocs(q);
+        container.innerHTML = "";
+
+        if (querySnapshot.empty) {
+            container.innerHTML = "<p>No se encontraron mensajes.</p>";
+            return;
+        }
+
+        querySnapshot.forEach((docItem) => {
+            const data = docItem.data();
+            const id = docItem.id;
+            
+            // Aquí va el resto de tu código para generar las tarjetas (HTML)
+            // ... (el código que ya tenías de las cards)
+            container.innerHTML += `
+            <div class="card p-3 mb-3 shadow-sm ${data.leido ? 'bg-light text-muted' : 'bg-white'}">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <b>${data.nombre}</b> ${data.favorito ? '⭐' : ''}<br>
+                        <small>${data.email}</small>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-outline-warning btn-sm" onclick="toggleFavorito('${id}', ${data.favorito})">⭐</button>
+                        <button class="btn btn-outline-info btn-sm" onclick="toggleLeido('${id}', ${data.leido})">✓</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteMessage('${id}')">🗑️</button>
+                    </div>
+                </div>
+                <hr>
+                <p>${data.mensaje}</p>
+            </div>`;
+        });
+    } catch (error) {
+        console.error("Error detallado:", error);
+        // Aquí es donde verás el link azul de Firebase en la consola
+        container.innerHTML = "<p class='text-danger'>Error al filtrar. Revisa la consola (F12) para activar el índice.</p>";
+    }
+}
+
+window.deleteMessage = async function(id){
+
+const confirmar = confirm("¿Eliminar este mensaje?");
+
+if(!confirmar) return;
+
+await deleteDoc(doc(db,"mensajes",id));
+
+alert("Mensaje eliminado");
+
+loadMessages();
+
+}
+
+</script>
+
+
 
 </body>
 </html>

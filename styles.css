@@ -61,3 +61,12 @@
   align-items: center;
   justify-content: center;
 }
+
+body{
+  padding-top:70px;
+}
+
+.navbar{
+background:white;
+border-bottom:1px solid #eee;
+}
